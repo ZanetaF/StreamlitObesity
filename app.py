@@ -230,7 +230,7 @@ if submit_button:
         }
         
         try:
-            response = requests.post("http://localhost:8000/predict", json=data, timeout=10)
+            response = requests.post("https://uasmodel-deployment-production.up.railway.app/predict", json=data, timeout=10)
             if response.status_code == 200:
                 result = response.json()
                 prediction = result["prediction"]
